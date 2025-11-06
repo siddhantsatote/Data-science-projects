@@ -1,0 +1,35 @@
+#include <stdio.h>
+int main() {
+    int i, j;
+    for(i=1; i<=4; i++) {
+        for(j=1; j<=i; j++)
+            printf("%d", j);
+        printf("\n");
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+int main() {
+    int i, j, k, n = 4;
+    
+    // Upper Half
+    for(i=1; i<=n; i++) {
+        for(j=i; j<n; j++)
+            printf(" ");
+        for(k=1; k<=i; k++)
+            printf("%d ", i);
+        printf("\n");
+    }
+
+    // Lower Half
+    for(i=n-1; i>=1; i--) {
+        for(j=n; j>i; j--)
+            printf(" ");
+        for(k=1; k<=i; k++)
+            printf("%d ", i);
+        printf("\n");
+    }
+    return 0;
+}
